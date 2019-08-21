@@ -8,6 +8,7 @@ import { DocumentService } from "../../services/document.service";
 import { JoyrideOptionsService } from "../../services/joyride-options.service";
 import { Logger } from "../../services/logger.service";
 import { CLOSE_SVG } from "../assets";
+import { Observable } from 'rxjs';
 
 const STEP_MIN_WIDTH = 200;
 const STEP_MAX_WIDTH = 400;
@@ -44,6 +45,8 @@ export class JoyrideStepComponent implements OnInit, OnDestroy, AfterViewInit {
     isPrevButtonVisible: boolean;
     themeColor: string;
     customContent: TemplateRef<any>;
+    hideButtons: boolean;
+    isCloseable = true;
 
     private arrowSize: number = ARROW_SIZE;
     private stepAbsoluteLeft: number;
@@ -61,7 +64,10 @@ export class JoyrideStepComponent implements OnInit, OnDestroy, AfterViewInit {
     private positionAlreadyFixed: boolean;
     private documentHeight: number;
 
+
+
     @Input() step?: JoyrideStep;
+
     @ViewChild('stepHolder') stepHolder: ElementRef;
     @ViewChild('stepContainer') stepContainer: ElementRef;
 
@@ -89,6 +95,8 @@ export class JoyrideStepComponent implements OnInit, OnDestroy, AfterViewInit {
         this.isCounterVisible = this.optionsService.isCounterVisible();
         this.isPrevButtonVisible = this.optionsService.isPrevButtonVisible();
         this.themeColor = this.optionsService.getThemeColor();
+        this.hideButtons = this.optionsService.getHideButtons();
+        this.isCloseable = this.optionsService.isCloseable();
     }
 
     ngAfterViewInit() {

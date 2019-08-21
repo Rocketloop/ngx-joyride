@@ -11,3 +11,4 @@ export * from './services/step-drawer.service';
 export * from './services/dom.service';
 export * from './services/logger.service';
 export * from './components/index';
+export * from  './pipes/maybe-async.pipe'

@@ -3,6 +3,7 @@ import { JoyrideStep } from "../models/joyride-step.class";
 import { JoyrideStepsContainerService } from "../services/joyride-steps-container.service";
 import { JoyrideError } from "../models/joyride-error.class";
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 export const NO_POSITION = "NO_POSITION";
 
@@ -28,6 +29,12 @@ export class JoyrideDirective implements AfterViewInit {
 
     @Input()
     stepContent?: TemplateRef<any>;
+
+    @Input() previousButtonLabel?: string | Observable<string>;
+
+    @Input() nextButtonLabel?: string | Observable<string>;
+
+    @Input() doneButtonLabel?: string | Observable<string>;
 
     @Output()
     prev?: EventEmitter<any> = new EventEmitter<any>();
@@ -59,7 +66,11 @@ export class JoyrideDirective implements AfterViewInit {
         step.route = this.router.url.substr(0, 1) === '/' ? this.router.url.substr(1) : this.router.url;
         step.transformCssStyle = window.getComputedStyle(this.viewContainerRef.element.nativeElement).transform;
         step.isElementOrAncestorFixed = this.isElementFixed(this.viewContainerRef.element) || this.isAncestorsFixed(this.viewContainerRef.element.nativeElement.parentElement);
-        
+
+        step.previousButtonLabel = this.previousButtonLabel;
+        step.nextButtonLabel = this.nextButtonLabel;
+        step.doneButtonLabel = this.doneButtonLabel;
+
         this.joyrideStepsContainer.addStep(step);
     }
 

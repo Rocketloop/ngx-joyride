@@ -14,6 +14,9 @@ export class JoyrideOptionsService {
     private showCounter: boolean = true;
     private showPrevButton: boolean = true;
     private stepsOrder: string[] = [];
+    hideButtons: boolean;
+    closeable: boolean;
+
     setOptions(options: JoyrideOptions) {
         this.stepsOrder = options.steps;
         this.stepDefaultPosition = options.stepDefaultPosition ? options.stepDefaultPosition : this.stepDefaultPosition;
@@ -21,6 +24,8 @@ export class JoyrideOptionsService {
         this.showCounter = typeof options.showCounter !== 'undefined' ? options.showCounter : this.showCounter;
         this.showPrevButton = typeof options.showPrevButton !== 'undefined' ? options.showPrevButton : this.showPrevButton;
         this.themeColor = options.themeColor ? options.themeColor : this.themeColor;
+        this.hideButtons = options.hideButtons;
+        this.closeable = options.closeable;
     }
 
     getBackdropColor() {
@@ -49,6 +54,14 @@ export class JoyrideOptionsService {
 
     isPrevButtonVisible() {
         return this.showPrevButton;
+    }
+
+    getHideButtons() {
+        return this.hideButtons;
+    }
+
+    isCloseable() {
+        return this.closeable;
     }
 
     private hexToRgb(hex: any): string {

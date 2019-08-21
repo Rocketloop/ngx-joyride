@@ -1,5 +1,6 @@
-import { ViewContainerRef, TemplateRef, EventEmitter } from "@angular/core";
+import { ViewContainerRef, TemplateRef, EventEmitter, Input } from '@angular/core';
 import { JoyrideStepComponent } from "../components/step/joyride-step.component";
+import { Observable } from 'rxjs';
 
 export class JoyrideStep {
     name: string;
@@ -15,4 +16,7 @@ export class JoyrideStep {
     isElementOrAncestorFixed: boolean;
     targetViewContainer: ViewContainerRef;
     stepInstance: JoyrideStepComponent;
+    previousButtonLabel: string | Observable<string>;
+    nextButtonLabel: string | Observable<string>;
+    doneButtonLabel: string | Observable<string>;
 }
