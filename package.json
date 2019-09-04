@@ -1,6 +1,6 @@
 {
   "name": "@rocketloop/ngx-joyride-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fork of the ngx-joyride lib by tnicola",
   "types": "src/lib/index.ts",
   "scripts": {
