@@ -1,7 +1,7 @@
 {
-  "name": "ngx-joyride",
-  "version": "2.0.2",
-  "description": "Angular Joyride Library",
+  "name": "@rocketloop/ngx-joyride",
+  "version": "1.0.4",
+  "description": "Fork of the ngx-joyride lib by tnicola",
   "main": "./bundles/ngx-joyride.umd.js",
   "jsnext:main": "./esm5/ngx-joyride.esm.js",
   "module": "./esm5/ngx-joyride.esm.js",
@@ -9,8 +9,8 @@
   "typings": "./joyride.d.ts",
   "author": "Nicola Tommasi",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/tnicola/ngx-joyride"
+    "type" : "git",
+    "url" : "https://github.com/Rocketloop/ngx-joyride.git"
   },
   "license": "MIT",
   "keywords": [
