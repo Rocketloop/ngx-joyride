@@ -1,6 +1,6 @@
 {
   "name": "@rocketloop/ngx-joyride",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Fork of the ngx-joyride lib by tnicola",
   "main": "./bundles/ngx-joyride.umd.js",
   "jsnext:main": "./esm5/ngx-joyride.esm.js",
