@@ -15,7 +15,6 @@ import { StepDrawerService } from './services/step-drawer.service';
 import { DomRefService } from './services/dom.service';
 import { Logger } from './services/logger.service';
 import { RouterModule } from "@angular/router";
-import { MaybeAsyncPipe } from './pipes/maybe-async.pipe';
 
 @NgModule({
     imports: [CommonModule, RouterModule.forChild([])],
@@ -24,13 +23,10 @@ import { MaybeAsyncPipe } from './pipes/maybe-async.pipe';
         JoyrideStepComponent,
         JoyrideArrowComponent,
         JoyrideButtonComponent,
-        MaybeAsyncPipe
     ],
     entryComponents: [JoyrideStepComponent],
-    providers: [MaybeAsyncPipe],
     exports: [
-        JoyrideDirective,
-        MaybeAsyncPipe
+        JoyrideDirective
     ]
 })
 export class JoyrideModule {
@@ -47,8 +43,7 @@ export class JoyrideModule {
                 JoyrideOptionsService,
                 StepDrawerService,
                 DomRefService,
-                Logger,
-                MaybeAsyncPipe
+                Logger
             ]
         }
     }
