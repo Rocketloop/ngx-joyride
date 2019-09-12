@@ -4,7 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "ngx-joyride": [
+      "@rocketloop/ngx-joyride": [
         "../lib/public_api.ts"
       ]
     }

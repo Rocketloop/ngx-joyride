@@ -14,7 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     alias: {
-      'ngx-joyride': path.resolve(__dirname, '../src/lib')
+      '@rocketloop/ngx-joyride': path.resolve(__dirname, '../src/lib')
     }
   },
 

@@ -20,7 +20,7 @@
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true,
         "flatModuleOutFile": "joyride.js",
-        "flatModuleId": "ngx-joyride",
+        "flatModuleId": "@rocketloop/ngx-joyride",
         "annotateForClosureCompiler": true,
         "debug": true
     }

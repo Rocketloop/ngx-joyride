@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { JoyrideService } from "ngx-joyride";
+import { JoyrideService } from "@rocketloop/ngx-joyride";
 import { Router } from "@angular/router";
 
 @Component({

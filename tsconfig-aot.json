@@ -17,7 +17,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "ngx-joyride": [
+      "@rocketloop/ngx-joyride": [
         "./src/lib/public_api.ts"
       ]
     }

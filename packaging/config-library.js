@@ -1,5 +1,5 @@
 module.exports = {
-    nameLibrary : "ngx-joyride",
+    nameLibrary : "@rocketloop/ngx-joyride",
     PATH_LIB : "src/lib/",
     PATH_SRC : "src/lib/src/",
     PATH_DIST : "src/lib/dist/",
